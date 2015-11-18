@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home Admin</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link rel="stylesheet" type="text/css" href="home_admin.css">
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="home_admin.js"></script>
+</head>
+<body>
+	<div id="header">
+		<img id="header-image" src="/logo.png" />
+		<a id="logout-btn" href="/logout">Logout</a>
+	</div>
+	<div id="content">
+<!-- 		<form id="uploadForm" enctype="multipart/form-data" action="/api/photo" method="post">
+			<input type="file" name="userPhoto" accept="image/*"/>
+			<input type="submit" value="Upload Image" name="submit">
+		</form> -->
+
+		<div><input id="get-order-btn" type="button" value="Get Orders"/></div>
+		<div id="order-list">
+			<div class="inner">
+				<input id="hide-order-btn" class="dismiss-btn" type="button" value="X"/>
+				<table id="order-table"></table>
+			</div>
+		</div>
+		<div id="order-detail">
+			<div class="inner">
+				<input id="hide-detail-btn" class="dismiss-btn" type="button" value="X"/>
+				<table id="order-detail-tab"></table>
+				<div id="deliver-order">
+					<label for="deliver-checkbox">Deliver Order </label>
+					<input id="deliver-checkbox" type="checkbox"/>
+					<input id="deliver-button" type="button" value="Proceed" disabled/>
+				</div>
+			</div>
+		</div>
+
+		<div id="menu-items">
+			<table id="menu-table"></table>
+		</div>
+	</div>
+	<div id="footer"></div>
+</body>
+</html>

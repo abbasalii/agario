@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agario</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link rel="stylesheet" type="text/css" href="map.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="map.js"></script>
+	<script type="text/javascript" src="fb.js"></script>
+</head>
+<body>
+	<div>
+		<canvas id="myCanvas" width="200" height="100"></canvas>
+	</div>
+
+	<div>
+		<form id="signup-form" action="/signup" method="post">
+			<table>
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" name="firstname" placeholder="" required></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" name="lastname" placeholder="" required></td>
+				</tr>
+				<tr>
+					<td>Login ID</td>
+					<td><input type="text" name="loginid" placeholder="" required></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" placeholder="" required></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Sign Up"></td>
+				</tr>
+			</table>
+			
+		</form>
+	</div>
+
+	<div>
+		<form id="signin-form" action="/signin" method="post">
+			<table>
+				<tr>
+					<td><input type="text" name="loginid" placeholder="Login ID" required></td>
+				</tr>
+				<tr>
+					<td><input type="password" name="password" placeholder="Password" required></td>
+				</tr>
+
+				<tr>
+					<td>
+						<input type="submit" value="Login">
+						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+						</fb:login-button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
